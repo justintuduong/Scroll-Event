@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Scroll Event</title>
+</head>
+
+<body>
+    <p>scrolling test</p>
+
+    <!-- dummy content for scroll -->
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos laudantium suscipit officia provident explicabo tempore enim libero? Voluptatem blanditiis similique facilis unde numquam nulla culpa ea itaque. Accusantium, esse deleniti.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos laudantium suscipit officia provident explicabo tempore enim libero? Voluptatem blanditiis similique facilis unde numquam nulla culpa ea itaque. Accusantium, esse deleniti.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos laudantium suscipit officia provident explicabo tempore enim libero? Voluptatem blanditiis similique facilis unde numquam nulla culpa ea itaque. Accusantium, esse deleniti.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos laudantium suscipit officia provident explicabo tempore enim libero? Voluptatem blanditiis similique facilis unde numquam nulla culpa ea itaque. Accusantium, esse deleniti.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos laudantium suscipit officia provident explicabo tempore enim libero? Voluptatem blanditiis similique facilis unde numquam nulla culpa ea itaque. Accusantium, esse deleniti.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos laudantium suscipit officia provident explicabo tempore enim libero? Voluptatem blanditiis similique facilis unde numquam nulla culpa ea itaque. Accusantium, esse deleniti.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos laudantium suscipit officia provident explicabo tempore enim libero? Voluptatem blanditiis similique facilis unde numquam nulla culpa ea itaque. Accusantium, esse deleniti.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos laudantium suscipit officia provident explicabo tempore enim libero? Voluptatem blanditiis similique facilis unde numquam nulla culpa ea itaque. Accusantium, esse deleniti.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos laudantium suscipit officia provident explicabo tempore enim libero? Voluptatem blanditiis similique facilis unde numquam nulla culpa ea itaque. Accusantium, esse deleniti.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos laudantium suscipit officia provident explicabo tempore enim libero? Voluptatem blanditiis similique facilis unde numquam nulla culpa ea itaque. Accusantium, esse deleniti.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos laudantium suscipit officia provident explicabo tempore enim libero? Voluptatem blanditiis similique facilis unde numquam nulla culpa ea itaque. Accusantium, esse deleniti.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos laudantium suscipit officia provident explicabo tempore enim libero? Voluptatem blanditiis similique facilis unde numquam nulla culpa ea itaque. Accusantium, esse deleniti.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos laudantium suscipit officia provident explicabo tempore enim libero? Voluptatem blanditiis similique facilis unde numquam nulla culpa ea itaque. Accusantium, esse deleniti.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos laudantium suscipit officia provident explicabo tempore enim libero? Voluptatem blanditiis similique facilis unde numquam nulla culpa ea itaque. Accusantium, esse deleniti.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos laudantium suscipit officia provident explicabo tempore enim libero? Voluptatem blanditiis similique facilis unde numquam nulla culpa ea itaque. Accusantium, esse deleniti.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos laudantium suscipit officia provident explicabo tempore enim libero? Voluptatem blanditiis similique facilis unde numquam nulla culpa ea itaque. Accusantium, esse deleniti.</p>
+    
+    <script src="jquery.js"></script>
+    <script>
+
+        $(document).ready(function () {
+
+            alert("document is ready!");
+
+            window.addEventListener('scroll', () => {
+
+                const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+
+                const scrolled = window.scrollY;
+
+                console.log(scrolled);  // prints pixels scrolled
+
+                // console.log(scrollable); // amount of scrollable pixels
+                
+                if (Math.ceil(scrolled) === scrollable) {   // rounds up the pixel.
+
+                    alert("You've scrolled to the bottom!");
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
